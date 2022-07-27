@@ -1,4 +1,5 @@
-function dias(mes){
-    let meses = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
-    return new Date(meses.indexOf(mes) + 1, 0).getDate();
+function days(year, month){
+    return new Date(year, month, 0).getDate();
 }
+console.log(days(2022, 7));
+console.log(days(2021, 2));
