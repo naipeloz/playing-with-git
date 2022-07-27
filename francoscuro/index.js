@@ -14,21 +14,11 @@ const meses = [
 ]
 
 
-// const meses = {
-//     Enero: 31,
-//     Febrero: 28,
-//     Marzo: 31,
-//     Abril: 30,
-//     Mayo: 31,
-//     Junio: 31,
-//     Julio: 30,
-//     Agosto: 31,
-//     Setiembre: 30,
-//     Octubre: 31,
-//     Noviembre: 30,
-//     Diciembre: 31
-// }
-
-const diasMes = () => {
-    let nombreMes
+function diasMes(month, year) {
+    return new Date(year, month, 0).getDate();
 }
+
+console.log(diasMes(1, 2022));
+console.log(diasMes(2, 2022));
+console.log(diasMes(3, 2022));
+console.log(diasMes(4, 2022));
