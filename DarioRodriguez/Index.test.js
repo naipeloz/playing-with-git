@@ -1,3 +1,9 @@
-test("suma", () => {
-        expect(5 + 1).toBe(6);
+const { sumar } = require('./Index')
+
+describe("testlist", () => {
+    test("suma", () => {
+            expect(sumar(5,4)).toBe(9);
+        });
     })
+
+
