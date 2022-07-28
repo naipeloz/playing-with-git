@@ -1,4 +1,4 @@
-function ppt(){
+function ppt(pregunta){
 
     let pregunta = prompt("Ingresa tu opción: 1, 2 o 3 "); 
     let user = pregunta.toLowerCase();
