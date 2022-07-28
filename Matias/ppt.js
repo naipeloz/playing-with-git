@@ -1,6 +1,5 @@
 function ppt(pregunta){
 
-    let pregunta = prompt("Ingresa tu opción: 1, 2 o 3 "); 
     let user = pregunta.toLowerCase();
     let options = ["1", "2", "3"];
     let machine = options[Math.floor(Math.random() * 3)];
