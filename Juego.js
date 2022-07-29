@@ -2,42 +2,46 @@ const Juego = () => {
 
   let humano = prompt('seleccione una de las siguientes opciones: 1=piedra, 2=papel y 3=tijera');
   humano = parseInt(humano)
+  console.log(humano)
   let maquina = Math.floor(Math.random() * (4 - 1) + 1);
+  console.log(maquina)
+  let maquinaSelect = "";
+  let humanoSelect = "";
   
     if (maquina === 1) {
-      maquina = "piedra";
+      maquinaSelect = "piedra";
     }
     if (maquina === 2) {
-      maquina = "papel";
+      maquinaSelect = "papel";
     }
     if (maquina === 3) {
-      maquina = "tijera";
+      maquinaSelect = "tijera";
     }
 
     if (humano === 1) {
-      humano = "piedra";
+      humanoSelect = "piedra";
     }
     if (humano === 2) {
-      humano = "papel";
+      humanoSelect = "papel";
     }
     if (humano === 3) {
-      humano = "tijera";
+      humanoSelect = "tijera";
     }
 
-    alert ('la maquina ha seleccionado:' + maquina)
-    alert ('tu has elegido:' + humano)
+    alert ('la maquina ha seleccionado: ' + maquinaSelect)
+    alert ('tu has elegido: ' + humanoSelect)
 
     if (
-      ( humano == "tijera" && maquina == "piedra") ||
-      ( humano == "papel" && maquina == "tijera") ||
-      ( humano == "piedra" && maquina == "papel") 
+      ( humano == 3 && maquina == 1) ||
+      ( humano == 2 && maquina == 3) ||
+      ( humano == 1 && maquina == 2) 
     ) {
       return console.log("la maquina ha ganado");
     }
     if (
-      ( humano == "piedra" && maquina == "tijera") ||
-      ( humano == "papel" && maquina == "piedra") ||
-      ( humano == "tijera" && maquina == "papel")
+      ( humano == 1 && maquina == 3) ||
+      ( humano == 2 && maquina == 1) ||
+      ( humano == 3 && maquina == 2)
     ) {
       return console.log("Has ganado! felicitaciones");
     }
